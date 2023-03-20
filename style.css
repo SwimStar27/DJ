@@ -1,0 +1,28 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#speedp,#volumep{
+    width: 320px;
+    height: 320px;
+}
+
+#left{
+    float: left;
+}
+
+#right{
+    float: right;
+}
+
+#btn{
+    background-color: lavender;
+    border-radius: 12px;
+}
+
+#note{
+    text-align: center;
+    color: azure;
+}
