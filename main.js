@@ -24,7 +24,7 @@ function modelLoaded(){
 }
 
 function draw(){
-    image(video,0,0,400,600);
+    image(video,0,0,200,400);
 }
 
 function play(){
