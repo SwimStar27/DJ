@@ -23,6 +23,22 @@ function modelLoaded(){
     console.log('PoseNet Is Initialized');
 }
 
+
+
+function gotPoses(results){
+    if(results.length > 0){
+     console.log(results);
+     leftwx = results[0].pose.leftWrist.x;
+     leftwy = results[0].pose.rightWrist.y;
+     console.log("Left Wrist X:  " + leftwx + "Left Wrist Y:" + leftwy);
+     scorelw = results[0].pose.keypoints[9].score;
+     rightwx = results[0].pose.rightWrist.x;
+     rightwy = results[0].pose.rightWrist.y;
+     console.log(" Right Wrist X: " + rightwx + "Right Wrist Y: " + rightwy);
+    } 
+ }
+
+
 function draw(){
     image(video,0,0,200,400);
     fill("#FF0000");
@@ -42,19 +58,4 @@ function play(){
     song.play();
     song.setVolume(1);
     song.rate(1);
-}
-
-function gotPoses(results){
-   if(results.length > 0){
-    console.log(results);
-    leftwx = results[0].pose.leftWrist.x;
-    leftwy = results[0].pose.rightWrist.y;
-    console.log("Left Wrist X:  " + leftwx + "Left Wrist Y:" + leftwy);
-
-    scorelw = results[0].pose.keypoints[9].score;
-
-    rightwx = results[0].pose.rightWrist.x;
-    rightwy = results[0].pose.rightWrist.y;
-    console.log(" Right Wrist X: " + rightwx + "Right Wrist Y: " + rightwy);
-   } 
 }
