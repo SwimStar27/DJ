@@ -10,8 +10,8 @@ function preload(){
 }
 
 function setup(){
-    canvas = createCanvas(200,400);
-    canvas.center();
+    canvas = createCanvas(500,400);
+    canvas.position(400,240);
 
     video = createCapture(VIDEO);
     video.hide();
@@ -42,7 +42,7 @@ function gotPoses(results){
 
 
 function draw(){
-    image(video,0,0,200,400);
+    image(video,0,0,500,400);
     fill("#FF0000");
     stroke("#FF0000");
 
@@ -77,7 +77,7 @@ function draw(){
             document.getElementById("speed").innerHTML= "Speed = 0.5 x";
             song.rate(0.5);
         }
-        
+
     }
 
 }

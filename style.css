@@ -17,12 +17,12 @@ body{
     float: right;
 }
 
-#btn{
-    background-color: lavender;
-    border-radius: 12px;
-}
 
 #note{
     text-align: center;
     color: azure;
+}
+
+canvas{
+    border: 2px dashed whitesmoke;
 }
